@@ -1,0 +1,93 @@
+.queries{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.queriesList{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.cardSubtext{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #767676;
+}
+
+.addMore{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2D565D;
+    border-color: #2D565D;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+}
+
+.ListHeading{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.assistButton{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #1F2447;
+    border-radius: 1rem;
+    background-color:#4450BE33;
+}
+
+.viewButton{
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    color: #123259;
+    background-color:#0D76E833;
+}
+
+.shareButton{
+    font-size: 1rem;
+    font-weight: 600;
+    color:  #2D565D;
+    background-color: #ffffff;
+}
+
+.listDetails{
+    font-size: 0.87rem;
+    font-weight: 400;
+    color:#767676;
+}
+
+.bg-column {
+    background-image: url("../../assets/backgroung-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20rem; /* Set a height */
+  }
+
+.imageHeading{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.imageText{
+    font-size: 0.88rem;
+    font-weight: 500;
+    color:  #F1FAF9;
+}
+
+.setMeetingBtn{
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #DBF2F2;
+    color: #2D565D;
+    border-radius: 0.3rem;
+}
+
+.contactBtn{
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color:#1FAF38;
+    color: #ffffff;
+    border-radius: 0.3rem;
+}

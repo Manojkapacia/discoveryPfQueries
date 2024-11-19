@@ -1,0 +1,89 @@
+.accordionHeading{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.categoryCheckbox{
+    font-size: 1rem;
+    font-weight: 400;
+    color:#4C4C4C;
+}
+.goalCheckbox{
+    font-size: 0.88rem;
+    font-weight: 400;
+    color:#4C4C4C;
+}
+
+.queriesButton{
+border: 1px solid #2D565D;
+border-radius: 0.30rem;
+font-size: 0.75rem;
+font-weight: 600;
+color: #2D565D;
+}
+
+.cardHeading{
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.cardText{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #767676;
+}
+.assistButton{
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #1F2447;
+    border-radius: 1rem;
+    background-color:#4450BE33;
+}
+
+.viewButton{
+    font-size: 0.75rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    color: #123259;
+    background-color:#0D76E833;
+}
+
+.addButton{
+    font-weight: 600;
+    font-size: 1rem;
+    color:  #2D565D;
+    background-color:#ffffff;
+}
+
+.ribbon {
+    position: absolute;
+    margin-top: 4rem;
+    /* top: rem;  */
+    left: -1.5rem; 
+    width: 8rem; /* Adjust width of ribbon */
+    /* height: 30px; */
+    background-color: #20c997; /* Bootstrap 'success' color */
+    color: #000000;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.63rem;
+    font-weight: bold;
+    transform: rotate(-42deg); /* Rotates the ribbon diagonally */
+    transform-origin: left top; /* Ensure proper pivot for rotation */
+    z-index: 10;
+  }
+
+  .footerColor{
+    background-color:#2D565D;
+  }
+  .footerText{
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .myListButton{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:#2D565D;
+    border-radius: 0.5rem;
+    width: 14rem;
+  }
