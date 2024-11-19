@@ -1,47 +1,29 @@
-.logo{
+.logo {
   height: 2.2rem;
   width: 8rem;
 }
 
 :root {
-  --header-height: 10vh;
+  --header-height: 8vh;
 }
-.headerHeight{
+
+.headerHeight {
   height: var(--header-height);
 }
-/* .hr-two-color {
-  border: none;
-  height: 0.15rem;
-  background: linear-gradient(to right,  #006BFF 90%, #D9D9D9 10%);
-} */
 
-.setBackground{
-  background-color:#EEF8F6;
-  /* height: 88vh; */
+.setBackground {
+  background-color: #EEF8F6;
   height: calc(97.8vh - var(--header-height));
   margin-top: var(--header-height);
 }
 
-@media only screen and (min-width: 1300px) {
-  .setBackground {
-    /* height: 91.5vh; */
-    height: calc(98.1vh - var(--header-height));
-    margin-top: var(--header-height);
-  }
-}
-@media only screen and (min-width: 2300px) {
-  .setBackground {
-    /* height: 95.2vh; */
-    height: calc(98.8vh - var(--header-height));
-    margin-top: var(--header-height);
-  }
-}
-.loaderHeading{
+.loaderHeading {
   font-size: 2rem;
   font-weight: 700;
   color: black;
 }
-.loaderSubheading{
+
+.loaderSubheading {
   font-size: 0.85rem;
   font-weight: 400;
   color: black;
@@ -51,30 +33,26 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   border: 2px solid #ccc;
   background-color: white;
-  color: #6c757d; /* Gray */
+  color: #6c757d;
   font-weight: bold;
   font-size: 0.88rem;
 }
 
 .circle.completed {
-  background-color: #004b73; /* Dark blue */
+  background-color: #004b73;
   color: white;
   border-color: #004b73;
 }
 
 .step-label {
-  /* margin-top: 10px; */
   font-size: 0.75rem;
-  color: #6c757d; /* Gray */
+  color: #6c757d;
 }
 
 .step-label.active-label {
-  color: #004b73; /* Dark blue */
+  color: #004b73;
   font-weight: bold;
 }
 
@@ -82,9 +60,30 @@
   flex-grow: 1;
   height: 2px;
   background-color: #ccc;
-  /* margin: 0 10px; */
+  margin-bottom: 1rem;
 }
 
 .line.active {
-  background-color: #004b73; /* Dark blue */
+  background-color: #004b73;
+}
+
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 1300px) {
+  .setBackground {
+    height: calc(98.1vh - var(--header-height));
+    margin-top: var(--header-height);
+  }
+}
+
+@media only screen and (min-width: 2300px) {
+  .setBackground {
+    height: calc(98.8vh - var(--header-height));
+    margin-top: var(--header-height);
+  }
 }
