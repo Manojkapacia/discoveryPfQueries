@@ -1,9 +1,45 @@
 import '../../App.css'
 import '../../css/queries/normal-state.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 function NormalState() {
+
+    const [cardStates, setCardStates] = useState([
+        { id: 1, isFirstButton: true },
+        { id: 2, isFirstButton: true },
+        { id: 3, isFirstButton: true },
+        { id: 4, isFirstButton: true },
+    ]);
+    const [count, setCount] = useState(0);
+    const handleAdd = () => {
+        setCount(count + 1);
+      };
+    
+      const handleRemove = () => {
+        if (count > 0) {
+          setCount(count - 1);
+        }
+      };
+      
+    const handleButtonClick = (id) => {
+        setCardStates((prevState) =>
+            prevState.map((card) =>
+                card.id === id ? { ...card, isFirstButton: !card.isFirstButton } : card
+            )
+        );
+    };
+
+    const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/select-answer");
+  };
+
+
     return (
+
         <div className='container-fluid mt-4'>
             <div className='row'>
                 <div className='col-lg-8 offset-lg-2 px-lg-0'>
@@ -12,7 +48,7 @@ function NormalState() {
                 </div>
             </div>
 
-            <div className='row my-3'>
+            <div className='row mt-3' style={{marginBottom: '5rem'}}>
                 <div className='col-lg-3 offset-lg-2 ps-lg-0 mb-3'>
                     <div style={{ border: '1px solid #DCDCDC', borderRadius: '0.50rem' }}>
                         <div className="card mx-3 my-3">
@@ -148,76 +184,48 @@ function NormalState() {
 
                 </div>
                 <div className='col-lg-5 pe-lg-0'>
-                    <div className="card "
-                        style={{ overflow: "hidden" }}>
-                        <div className="ribbon">
-                            Recommended
+                    {cardStates.map((card) => (
+                        <div className="card mb-3"
+                            style={{ overflow: "hidden" }}>
+                            <div className="ribbon">
+                                Recommended
+                            </div>
+                            <div className="card-body mt-5">
+                                <h6 className='accordionHeading'>I have senior citizen parents with pre-existing conditions.
+                                    Is there any specific plan for them
+                                </h6>
+                                <p className='goalCheckbox'>VS Code has an extensive marketplace with various extensions, including one
+                                    specifically designed to generate Lorem Ipsum text. Here’s how to install
+                                    and use it.Open the VS Code Marketplace by clicking on the Extensions icon
+                                    on the sidebar
+                                </p>
+                                <button className='border-0 assistButton px-3 py-1'>134 Assisted</button>
+                                <button className='border-0 ms-2 px-3 py-1 viewButton'>1.5k views</button><br></br>
+                                {card.isFirstButton ? (
+                                    <button onClick={() => {handleAdd();handleButtonClick(card.id)}}className='border-0 mt-3 addButton'>+ Add to list</button>
+                                ) : (
+                                    <button onClick={() => {handleRemove();handleButtonClick(card.id)}} className='border-0 mt-3 addButton'>Query Selected</button>
+                                )}
+                            </div>
                         </div>
-                        <div className="card-body mt-5">
-                            <h6 className='accordionHeading'>I have senior citizen parents with pre-existing conditions.
-                                Is there any specific plan for them
-                            </h6>
-                            <p className='goalCheckbox'>VS Code has an extensive marketplace with various extensions, including one
-                                specifically designed to generate Lorem Ipsum text. Here’s how to install
-                                and use it.Open the VS Code Marketplace by clicking on the Extensions icon
-                                on the sidebar
-                            </p>
-                            <button className='border-0 assistButton px-3 py-1'>134 Assisted</button>
-                            <button className='border-0 ms-2 px-3 py-1 viewButton'>1.5k views</button><br></br>
-                            <button className='border-0 mt-3 addButton'>+ Add to list</button>
-                        </div>
-                    </div>
-
-                    <div className="card my-4" style={{ overflow: "hidden" }}>
-                        <div className="ribbon">
-                            Recommended
-                        </div>
-                        <div className="card-body mt-5">
-                            <h6 className='accordionHeading'>I have senior citizen parents with pre-existing conditions.
-                                Is there any specific plan for them
-                            </h6>
-                            <p className='goalCheckbox'>VS Code has an extensive marketplace with various extensions, including one
-                                specifically designed to generate Lorem Ipsum text. Here’s how to install
-                                and use it.Open the VS Code Marketplace by clicking on the Extensions icon
-                                on the sidebar
-                            </p>
-                            <button className='border-0 assistButton px-3 py-1'>134 Assisted</button>
-                            <button className='border-0 ms-2 px-3 py-1 viewButton'>1.5k views</button><br></br>
-                            {/* <button className='border-0 mt-3 addButton'>+ Add to list</button> */}
-                            <button className='border-0 mt-3 addButton'>Query Selected</button>
-                        </div>
-                    </div>
-
-                    <div className="card" style={{ overflow: "hidden" }}>
-                        <div className="ribbon">
-                            Recommended
-                        </div>
-                        <div className="card-body mt-5">
-                            <h6 className='accordionHeading'>I have senior citizen parents with pre-existing conditions.
-                                Is there any specific plan for them
-                            </h6>
-                            <p className='goalCheckbox'>VS Code has an extensive marketplace with various extensions, including one
-                                specifically designed to generate Lorem Ipsum text. Here’s how to install
-                                and use it.Open the VS Code Marketplace by clicking on the Extensions icon
-                                on the sidebar
-                            </p>
-                            <button className='border-0 assistButton px-3 py-1'>134 Assisted</button>
-                            <button className='border-0 ms-2 px-3 py-1 viewButton'>1.5k views</button><br></br>
-                            {/* <button className='border-0 mt-3 addButton'>+ Add to list</button> */}
-                            <button className='border-0 mt-3 addButton'>Query Selected</button>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
             {/* Footer */}
-            <footer className="footerColor text-white py-3 fixed-bottom">
+            {count > 0 && (
+                <footer  className="footerColor text-white py-3 fixed-bottom">
                 <div className='row'>
-                    <div className='col-lg-8 offset-lg-2 px-lg-0 text-end'>
-                        <span className='footerText'>6 Queries selected </span>
-                        <button className='border-0 text-center ms-3 py-2 myListButton'>My List</button>
+                    <div className='col-lg-8 offset-lg-2 d-flex flex-column 
+                    flex-md-row align-items-center 
+                    justify-content-lg-end justify-content-center text-center me-2'>
+                        <span className='footerText'>{count} Queries selected </span>
+                        <button className='border-0 text-center ms-md-3 mt-2 py-1 mt-md-0 py-md-2 myListButton' 
+                            onClick={handleNavigate}>My List
+                        </button>
                     </div>
                 </div>
             </footer>
+            )}
         </div>
     );
 }

@@ -1,7 +1,31 @@
-import React from 'react';
+// import React from 'react';
 import loader from '../../assets/personalising-loader.png';
+import loaderSuccess from '../../assets/loader-success.png';
+import React, { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function PersonalisingLoder() {
+    const [currentImage, setCurrentImage] = useState(loader);
+    // console.log("ImageLoad",currentImage);
+    const navigate = useNavigate();
+    
+
+    useEffect(() => {
+        const imageTimer = setTimeout(() => {
+          setCurrentImage(loaderSuccess);
+        }, 5000);
+
+        const navigationTimer = setTimeout(() => {
+          navigate("/add-list");
+        }, 8000);
+    
+        return () => {
+          clearTimeout(imageTimer);
+          clearTimeout(navigationTimer);
+        };
+      }, [navigate]);
+
+
     return (
         <div className='container-fluid mt-2'>
             <div className='row align-items-center'>
@@ -17,7 +41,7 @@ function PersonalisingLoder() {
             <div className='row  d-flex justify-content-center align-items-center setBackground'>
                 <div className='row'>
                     <div className='col-lg-12 text-center'>
-                        <img src={loader} alt="Personalising Loader"
+                        <img src={currentImage} alt="Personalising Loader"
                             className="personalisingLoader" style={{ height: "15rem", width: "12rem" }} />
                     </div>
                     <div className='col-lg-4 offset-lg-4'>

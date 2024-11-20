@@ -3,7 +3,8 @@ import logo from '../../assets/finight.png';
 
 function Header() {
     return (
-        <div className='row align-items-center headerHeight'>
+        <div className='container-fluid'>
+            <div className='row align-items-center headerHeight mt-3'>
             <div className='col-lg-6'>
                 <img src={logo} alt="Logo" className="logo ms-3" />
             </div>
@@ -31,6 +32,8 @@ function Header() {
                 </div>
             </div>
         </div>
+        </div>
+        
     );
 }
 
