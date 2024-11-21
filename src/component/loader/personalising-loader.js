@@ -13,11 +13,11 @@ function PersonalisingLoder() {
     useEffect(() => {
         const imageTimer = setTimeout(() => {
           setCurrentImage(loaderSuccess);
-        }, 5000);
+        }, 2000);
 
         const navigationTimer = setTimeout(() => {
-          navigate("/add-list");
-        }, 8000);
+        //   navigate("/add-list");
+        }, 4000);
     
         return () => {
           clearTimeout(imageTimer);
@@ -27,7 +27,7 @@ function PersonalisingLoder() {
 
 
     return (
-        <div className='container-fluid mt-2'>
+        <div className='container-fluid'>
             <div className='row align-items-center'>
                 <div className="col-9 progress ps-0" style={{ height: '0.2rem' }}>
                     <div

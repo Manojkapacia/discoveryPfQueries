@@ -39,8 +39,7 @@ function NormalState() {
 
 
     return (
-
-        <div className='container-fluid mt-4'>
+        <div className='container-fluid pt-4'>
             <div className='row'>
                 <div className='col-lg-8 offset-lg-2 px-lg-0'>
                     <input type="text" className="form-control"
@@ -48,7 +47,7 @@ function NormalState() {
                 </div>
             </div>
 
-            <div className='row mt-3' style={{marginBottom: '5rem'}}>
+            <div className='row mt-3'>
                 <div className='col-lg-3 offset-lg-2 ps-lg-0 mb-3'>
                     <div style={{ border: '1px solid #DCDCDC', borderRadius: '0.50rem' }}>
                         <div className="card mx-3 my-3">

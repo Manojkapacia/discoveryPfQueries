@@ -3,7 +3,7 @@ import loaderSuccess from '../../assets/loader-success.png';
 
 function LoaderSuccess() {
     return (
-        <div className='container-fluid mt-2'>
+        <div className='container-fluid'>
             <div className='row'>
             <div className="col-9 progress ps-0" style={{ height: '0.2rem' }}>
             {/* <hr className='hr-two-color'></hr> */}

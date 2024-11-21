@@ -10,7 +10,7 @@ function AnswerPage() {
   };
 
     return (
-        <div className='container mt-5'>
+        <div className='container pt-4'>
             <div className='row'>
                 <div className='col-lg-3'>
                     <label className='queries mb-2'>Queries List</label>

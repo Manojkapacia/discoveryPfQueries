@@ -12,18 +12,15 @@ function App() {
     <div className="App">
       <Router>
         <Header></Header>
-        <Routes>
-          <Route path="/" element={<PersonalisingLoder />} />
-          <Route path="/add-list" element={<NormalState />} />
-          <Route path="/select-answer" element={<AnswerPage />} />
-          <Route path="*" element={<h2>404 - Page Not Found</h2>} />
-        </Routes>
+        <div className='main-content mt-4'>
+          <Routes>
+            <Route path="/" element={<PersonalisingLoder />} />
+            <Route path="/add-list" element={<NormalState />} />
+            <Route path="/select-answer" element={<AnswerPage />} />
+            <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+          </Routes>
+        </div>
       </Router>
-      {/* <Header></Header> */}
-      {/* <PersonalisingLoder></PersonalisingLoder> */}
-      {/* <LoaderSuccess></LoaderSuccess> */}
-      {/* <NormalState></NormalState> */}
-      {/* <AnswerPage></AnswerPage> */}
     </div>
   );
 }
